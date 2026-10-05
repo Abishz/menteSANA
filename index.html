@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma MenteSana para bienestar psicológico estudiantil">
+  <title>MenteSana - Inicio</title>
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- CORRECCIÓN AQUÍ: Se agregó rel="stylesheet" -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- HEADER Y NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom shadow">
+      <div class="container">
+        
+        <!-- LOGO DE MENTESANA -->
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2 text-white" href="index.html">
+          <img src="img/logo-mentesana.jpeg" alt="Logo MenteSana" height="35" class="d-inline-block align-text-top rounded-1">
+          MenteSana
+        </a>
+
+        <button class="navbar-toggler border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active text-white fw-bold" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="citas.html">Citas</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="emocional.html">Diario y Contacto</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="admin.html">Acceso Admin</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN / CONTENIDO PRINCIPAL -->
+  <main class="container my-5">
+    
+    <!-- SECCIÓN HERO DE BIENVENIDA -->
+    <section id="hero" class="text-center py-5 px-3 rounded-4 shadow-sm mb-5 bg-white border border-light">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <h1 class="h1-style mb-3">Bienvenido a MenteSana</h1>
+          <p class="subtitulo text-muted mb-4">Plataforma digital de atención y bienestar emocional para la comunidad estudiantil.</p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="citas.html" class="btn btn-primary-mente rounded-2 shadow-sm">
+              <i class="bi bi-calendar-check me-1" aria-hidden="true"></i> Agendar Cita
+            </a>
+            <a href="emocional.html" class="btn btn-secondary-mente rounded-2 shadow-sm">
+              <i class="bi bi-emoji-smile me-1" aria-hidden="true"></i> Registro Emocional
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARRUSEL DE BOOTSTRAP -->
+    <section class="row justify-content-center mb-5">
+      <div class="col-12 col-md-10">
+        <div id="carouselBienestar" class="carousel slide rounded-3 overflow-hidden shadow-sm" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselBienestar" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+            <button type="button" data-bs-target="#carouselBienestar" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active bg-white p-5 text-center">
+              <i class="bi bi-shield-heart display-4 mb-3 text-primary-mente" aria-hidden="true"></i>
+              <h2 class="h2-style">Atención Discreta y Confidencial</h2>
+              <p class="text-muted">Tus datos e historial psicológico se mantienen protegidos bajo estrictos protocolos (RF-006).</p>
+            </div>
+            <div class="carousel-item bg-white p-5 text-center">
+              <i class="bi bi-clock-history display-4 mb-3 text-primary-mente" aria-hidden="true"></i>
+              <h2 class="h2-style">Gestión de Citas Rápida</h2>
+              <p class="text-muted">Consulta la disponibilidad de los especialistas y agenda tu cita médica web en pocos clics (RF-002).</p>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselBienestar" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-secondary rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselBienestar" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-secondary rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER SEMÁNTICO -->
+  <footer class="text-center py-3 mt-auto bg-dark text-white">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 MenteSana - Plataforma de Bienestar Estudiantil.</p>
+    </div>
+  </footer>
+
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
