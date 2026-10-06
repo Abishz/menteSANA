@@ -1,3 +1,7 @@
+/* ==========================================================================
+   MenteSana - Guía de Estilo Oficial (Material Design 3 Adaptado)
+   ========================================================================== */
+
 :root {
     /* Paleta Oficial */
     --morado-principal: #9B7FEA;
@@ -6,7 +10,7 @@
     --lavanda: #EEE9FF;
     --blanco: #FFFFFF;
     --texto-principal: #30364D;
-    
+
     /* Variables secundarias */
     --morado-hover: #8563E3;
     --topbar-bg: #2D2549;
@@ -86,6 +90,7 @@ body {
    -------------------------------------------------------------------------- */
 .hero-section {
     position: relative;
+    /* Fondo con degradado sobrio en lugar de la imagen */
     background: linear-gradient(135deg, var(--morado-principal), var(--azul-principal));
     color: var(--blanco);
     padding: 100px 0;
@@ -162,7 +167,7 @@ body {
     border: 1px solid var(--lavanda);
     border-radius: 16px;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .card-servicio:hover {
@@ -215,7 +220,7 @@ body {
 .emotion-scale label:hover {
     transform: translateY(-3px);
     border-color: var(--morado-principal);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .emotion-scale input[type="radio"]:checked + label {
