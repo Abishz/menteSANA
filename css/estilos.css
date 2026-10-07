@@ -214,3 +214,40 @@ body {
 .footer-mentesana a:hover {
     color: var(--blanco);
 }
+/* AJUSTES RESPONSIVOS Y MENÚ OFFCANVAS*/
+
+/* Evitar desbordamiento horizontal en toda la página */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Estilos del cajón lateral - coincidiendo con la guía de estilo */
+.offcanvas {
+    --bs-offcanvas-bg: var(--blanco);
+    --bs-offcanvas-border-color: var(--lavanda);
+}
+
+.offcanvas-header {
+    background-color: var(--azul-claro);
+}
+
+.offcanvas-body .nav-link {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.25rem;
+}
+
+.offcanvas-body .nav-link:hover,
+.offcanvas-body .nav-link.active {
+    background-color: var(--lavanda);
+    border-bottom: none;
+}
+
+/* Ajustes para pantallas pequeñas (< 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
