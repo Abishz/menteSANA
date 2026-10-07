@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenteSana - Nosotros</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts (Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos Propios (Compartidos con index.html) -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- 1. BARRA SUPERIOR DE CONTACTO E INFORMACIÓN UNIVERSITARIA -->
+    <div class="top-bar py-2">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <div>
+                <span class="me-3"><i class="fa-solid fa-graduation-cap me-1"></i> Área de Psicología UPP</span>
+                <span><i class="fa-solid fa-envelope me-1"></i> psicologia@upp.edu.mx</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <a href="contacto.html"><i class="fa-solid fa-phone me-1"></i> Línea de Atención</a>
+                <a href="https://wa.me/" target="_blank" class="text-success"><i class="fa-brands fa-whatsapp fa-lg"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. BARRA DE NAVEGACIÓN (NAVBAR) -->
+    <nav class="navbar navbar-expand-lg navbar-mentesana sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <!-- Espacio reservado para el logo -->
+                <div class="logo-placeholder">
+                    <!-- Aquí irá el tag <img> del logo -->
+                </div>
+                <span>Mente<span style="color: var(--morado-principal);">Sana</span></span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+                <a href="contacto.html" class="btn btn-morado ms-lg-3 mt-2 mt-lg-0 px-4">Reservar Cita</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. ENCABEZADO / HERO DE SECCIÓN -->
+    <header class="hero-section text-center d-flex align-items-center">
+        <div class="container py-3">
+            <span class="badge rounded-pill px-3 py-2 mb-3 fs-6" style="background-color: rgba(255,255,255,0.25); backdrop-filter: blur(5px);">
+                Conoce Nuestro Equipo
+            </span>
+            <h1 class="display-4 fw-bold mb-3">Sobre MenteSana</h1>
+            <p class="lead mb-0 mx-auto" style="max-width: 720px;">
+                Un espacio universitario dedicado a promover la salud mental, el bienestar emocional y la orientación académica de los estudiantes.
+            </p>
+        </div>
+    </header>
+
+    <!-- 4. CONTENIDO PRINCIPAL SOBRE NOSOTROS -->
+    <main class="container my-5 py-4">
+        
+        <!-- MISIÓN Y VISIÓN -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="card card-servicio h-100 p-4 border-0">
+                    <div class="card-body">
+                        <div class="icon-container">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 class="h4 card-title fw-bold text-center mb-3">Nuestra Misión</h3>
+                        <p class="card-text text-muted text-center">
+                            Facilitar a la comunidad estudiantil de la UPP un acceso ágil, confidencial y seguro a servicios de orientación psicológica y recursos psicoeducativos que favorezcan su desarrollo integral.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-servicio h-100 p-4 border-0">
+                    <div class="card-body">
+                        <div class="icon-container">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h3 class="h4 card-title fw-bold text-center mb-3">Nuestra Visión</h3>
+                        <p class="card-text text-muted text-center">
+                            Ser la plataforma digital referente dentro de la institución para la prevención, acompañamiento y cuidado de la salud mental, impulsando un entorno universitario saludable y empático.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VALORES PREDOMINANTES -->
+        <div class="text-center mb-4">
+            <h2 class="fw-bold" style="color: var(--texto-principal);">Nuestros Principios</h2>
+            <p class="text-muted">Pilares que guían la atención a los estudiantes</p>
+        </div>
+
+        <div class="row g-4 text-center mb-5">
+            <div class="col-md-4">
+                <div class="p-3">
+                    <i class="fa-solid fa-user-shield fa-2x mb-3" style="color: var(--morado-principal);"></i>
+                    <h4 class="h5 fw-bold">Confidencialidad</h4>
+                    <p class="small text-muted">Tus consultas y registros son tratados con total privacidad por el equipo profesional.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3">
+                    <i class="fa-solid fa-hand-holding-heart fa-2x mb-3" style="color: var(--morado-principal);"></i>
+                    <h4 class="h5 fw-bold">Empatía y Cercanía</h4>
+                    <p class="small text-muted">Ofrecemos un espacio sin juicios, centrado en el respeto y la escucha activa.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3">
+                    <i class="fa-solid fa-laptop-medical fa-2x mb-3" style="color: var(--morado-principal);"></i>
+                    <h4 class="h5 fw-bold">Accesibilidad</h4>
+                    <p class="small text-muted">Accede a herramientas e información psicoeducativa en cualquier momento desde tu dispositivo.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- UBICACIÓN Y ATENCIÓN PRESENCIAL -->
+        <div class="uni-banner shadow-sm">
+            <div class="row align-items-center">
+                <div class="col-lg-8 text-center text-lg-start mb-3 mb-lg-0">
+                    <h3 class="fw-bold mb-2" style="color: var(--texto-principal);">Encuéntranos en el Campus</h3>
+                    <p class="mb-0 text-secondary">
+                        El Área de Psicología se encuentra ubicada en el <strong>Edificio de Docencia 2</strong>. Atendemos de <strong>Lunes a viernes de 8:00 am a 6:00 pm</strong>.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <a href="contacto.html" class="btn btn-morado px-4 py-2">Ver Contacto</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 5. PIE DE PÁGINA (FOOTER COMPLETO) -->
+    <footer class="footer-mentesana mt-auto">
+        <div class="container">
+            <div class="row g-4 mb-4 text-start">
+                <!-- Columna 1: Nombre y Eslogan -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold mb-3 text-white">MenteSana</h5>
+                    <p class="small text-white-50">Tu bienestar emocional, a un solo clic.</p>
+                    <p class="small text-white-50">Plataforma digital para el cuidado y seguimiento de la salud mental universitaria.</p>
+                </div>
+                <!-- Columna 2: Navegación -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3 text-white">Navegación</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="index.html">Inicio</a></li>
+                        <li class="mb-2"><a href="nosotros.html">Nosotros</a></li>
+                        <li class="mb-2"><a href="servicios.html">Servicios</a></li>
+                        <li class="mb-2"><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <!-- Columna 3: Atención y Emergencias -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3 text-white">Atención Estudiantil</h6>
+                    <p class="small text-white-50 mb-2"><i class="fa-solid fa-location-dot me-2"></i> Edificio de Docencia 2</p>
+                    <p class="small text-white-50 mb-2"><i class="fa-solid fa-clock me-2"></i> Lunes a viernes de 8:00 am a 6:00 pm</p>
+                    <p class="small text-white-50"><i class="fa-solid fa-envelope me-2"></i> psicologia@upp.edu.mx</p>
+                </div>
+                <!-- Columna 4: Institucional -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3 text-white">Institución</h6>
+                    <p class="small text-white-50">Universidad Politécnica de Pachuca</p>
+                    <span class="badge bg-secondary">Versión 1.0</span>
+                </div>
+            </div>
+            <hr class="border-secondary opacity-50">
+            <div class="text-center py-2">
+                <p class="mb-0 small text-white-50">&copy; 2026 MenteSana - Universidad Politécnica de Pachuca. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script propio -->
+    <script src="js/main.js"></script>
+</body>
+</html>
