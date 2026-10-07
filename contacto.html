@@ -73,11 +73,214 @@
         </div>
     </nav>
 
-    <!--  AQUÍ ABAJO TU COMPAÑERO AGREGA EL CONTENIDO -->
+    <!--  TAREA 2: Maquetación Contacto + Sesión + Modales -->
     <main class="container my-5">
-        <h1>Contacto</h1>
-        <p class="text-muted">Espacio para formulario, ubicación y medios de contacto.</p>
-        <!-- NO BORRAR ESTRUCTURA DE ARRIBA - SOLO AGREGAR CONTENIDO AQUÍ -->
+        <h1 class="fw-bold text-center mb-4">Contacto y Atención</h1>
+        <p class="text-muted text-center mb-5">Estamos aquí para escucharte. Contáctate o accede a tu espacio.</p>
+
+        <!-- RF-001: SECCIÓN 1 — Formulario de Contacto -->
+        <div class="row g-4 mb-5">
+            <div class="col-lg-6">
+                <div class="card card-servicio h-100 p-4">
+                    <h3 class="h5 fw-bold mb-3">Envíanos un mensaje</h3>
+                    <form id="formContacto">
+                        <div class="mb-3">
+                            <label for="nombreCompleto" class="form-label fw-medium">Nombre completo *</label>
+                            <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" 
+                                   required placeholder="Tu nombre y apellidos">
+                        </div>
+                        <div class="mb-3">
+                            <label for="correoUPP" class="form-label fw-medium">Correo institucional *</label>
+                            <input type="email" class="form-control" id="correoUPP" name="correoUPP" 
+                                   required placeholder="usuario@upp.edu.mx" pattern="[a-z0-9._%+-]+@upp\.edu\.mx$">
+                            <div class="form-text">Usa tu correo institucional de la UPP</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="asunto" class="form-label fw-medium">Asunto *</label>
+                            <select class="form-select" id="asunto" name="asunto" required>
+                                <option value="">Selecciona un motivo...</option>
+                                <option>Consulta sobre citas</option>
+                                <option>Orientación psicológica</option>
+                                <option>Reporte o sugerencia</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label fw-medium">Mensaje *</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="4" 
+                                      required placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-morado w-100">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- RF-001: SECCIÓN 2 — Inicio de Sesión Institucional -->
+            <div class="col-lg-6">
+                <div class="card card-servicio h-100 p-4">
+                    <h3 class="h5 fw-bold mb-3">Acceso Institucional</h3>
+                    <p class="text-muted small mb-4">Ingresa con tus credenciales de la Universidad Politécnica de Pachuca</p>
+                    
+                    <form id="formLogin">
+                        <div class="mb-3">
+                            <label for="usuarioID" class="form-label fw-medium">ID de Usuario / Matrícula *</label>
+                            <input type="text" class="form-control" id="usuarioID" name="usuarioID" 
+                                   required placeholder="Ej. 20230001">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contrasena" class="form-label fw-medium">Contraseña *</label>
+                            <input type="password" class="form-control" id="contrasena" name="contrasena" 
+                                   required placeholder="Tu contraseña">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="recordarSesion">
+                            <label class="form-check-label small" for="recordarSesion">Recordar mi sesión</label>
+                        </div>
+                        <button type="submit" class="btn btn-morado w-100 mb-2">Iniciar Sesión</button>
+                        <a href="#" class="d-block text-center small text-decoration-none" style="color: var(--morado-principal);">¿Olvidaste tu contraseña?</a>
+                    </form>
+
+                    <hr class="my-4">
+
+                    <!-- RF-004: ACCIONES DE CITA → Botones que abren Modales -->
+                    <h4 class="h6 fw-bold mb-3">Gestión de Citas</h4>
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-morado" data-bs-toggle="modal" data-bs-target="#modalConfirmarCita">
+                            <i class="fa-solid fa-calendar-check me-2"></i>Confirmar Cita Agendada
+                        </button>
+                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalCancelarCita">
+                            <i class="fa-solid fa-circle-xmark me-2"></i>Cancelar Cita
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN: Ubicación y Datos de Contacto -->
+        <div class="uni-banner mb-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6">
+                    <h3 class="h5 fw-bold mb-3">Ubicación y Atención</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fa-solid fa-location-dot me-2" style="color: var(--morado-principal);"></i> Edificio de Docencia 2, Planta Baja</li>
+                        <li class="mb-2"><i class="fa-solid fa-clock me-2" style="color: var(--morado-principal);"></i> Lunes a Viernes — 8:00 a.m. a 6:00 p.m.</li>
+                        <li class="mb-2"><i class="fa-solid fa-envelope me-2" style="color: var(--morado-principal);"></i> psicologia@upp.edu.mx</li>
+                        <li><i class="fa-solid fa-phone me-2" style="color: var(--morado-principal);"></i> Línea directa: +52 771 123 4567</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <!-- Alerta Informativa de Bootstrap -->
+                    <div class="alert alert-primary border-0" role="alert">
+                        <i class="fa-solid fa-info-circle me-2"></i>
+                        <strong>¿Emergencia?</strong> Si sientes angustia o crisis, acude directamente al área de Psicología. Estamos para ti.
+                    </div>
+                    <div class="alert alert-warning border-0" role="alert">
+                        <i class="fa-solid fa-shield-heart me-2"></i>
+                        <strong>Confidencialidad:</strong> Tu información y sesión están protegidos. Nadie más tendrá acceso.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================================================== -->
+        <!-- RF-004: MODALES DE CONFIRMACIÓN Y CANCELACIÓN -->
+        <!-- ================================================== -->
+
+        <!-- Modal 1 — Confirmar Cita -->
+        <div class="modal fade" id="modalConfirmarCita" tabindex="-1" aria-labelledby="modalConfirmarCitaTitulo" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: var(--lavanda);">
+                        <h5 class="modal-title fw-bold" id="modalConfirmarCitaTitulo">
+                            <i class="fa-solid fa-calendar-check me-2" style="color: var(--morado-principal);"></i>Confirmar Cita
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-3">Verifica los datos de tu cita antes de confirmar:</p>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Fecha:</span>
+                                <strong>DD/MM/AAAA</strong>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Hora:</span>
+                                <strong>HH:MM</strong>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Modalidad:</span>
+                                <strong>Presencial / Virtual</strong>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Orientador:</span>
+                                <strong>Por asignar</strong>
+                            </li>
+                        </ul>
+                        <div class="form-check mb-2">
+                            <input type="checkbox" class="form-check-input" id="confirmoAsistencia" required>
+                            <label class="form-check-label small" for="confirmoAsistencia">
+                                Confirmo que asistiré en la fecha y hora indicadas *
+                            </label>
+                        </div>
+                        <p class="small text-muted mb-0"> Recuerda: Puedes modificar tu cita con al menos 24 horas de anticipación.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-morado">Confirmar Cita</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 2 — Cancelar Cita -->
+        <div class="modal fade" id="modalCancelarCita" tabindex="-1" aria-labelledby="modalCancelarCitaTitulo" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-danger">
+                    <div class="modal-header bg-danger text-white">
+                        <h5 class="modal-title fw-bold" id="modalCancelarCitaTitulo">
+                            <i class="fa-solid fa-triangle-exclamation me-2"></i>Cancelar Cita
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-3">¿Estás seguro de que deseas cancelar tu cita programada?</p>
+                        
+                        <div class="alert alert-light border mb-3" role="alert">
+                            <strong> Consecuencias:</strong>
+                            <ul class="mb-0 mt-1 small">
+                                <li>El espacio quedará disponible para otra persona</li>
+                                <li>Podrás agendar una nueva cita después</li>
+                                <li>Si cancelas con menos de 24h, se registrará como ausencia</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="motivoCancelacion" class="form-label fw-medium">Motivo de cancelación *</label>
+                            <select class="form-select" id="motivoCancelacion" required>
+                                <option value="">Selecciona un motivo...</option>
+                                <li>Conflicto de horario académico</li>
+                                <li>Imprevisto personal</li>
+                                <li>Me recuperé y no requiero la sesión</li>
+                                <li>Problemas de salud</li>
+                                <li>Otro</li>
+                            </select>
+                        </div>
+
+                        <div class="form-check mb-2">
+                            <input type="checkbox" class="form-check-input" id="entiendoCancelacion" required>
+                            <label class="form-check-label small text-danger" for="entiendoCancelacion">
+                                Comprendo que esta acción cancela mi cita y no se puede deshacer *
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mantener Cita</button>
+                        <button type="button" class="btn btn-danger">Sí, Cancelar Cita</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Modales RF-004 -->
     </main>
     <!-- ================================================== -->
 
