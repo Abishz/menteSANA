@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- Fuente Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Estilos Personalizados MenteSana -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Formularios - MenteSana</title>
+
+    <!-- Estilos específicos para esta página (temporalmente aquí) -->
+    <style>
+        :root {
+            --ms-azul: #5B8DEF;
+            --ms-morado: #9B7FEA;
+            --ms-azul-claro: #DCEEFF;
+            --ms-lavanda: #EEE9FF;
+            --ms-texto: #30364D;
+            --ms-blanco: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--ms-texto);
+            background-color: #f4f7f6;
+        }
+
+        /* Navbar superior (igual a tu referencia) */
+        .top-bar {
+            background-color: var(--ms-texto);
+            color: var(--ms-blanco);
+            font-size: 12px;
+            padding: 8px 0;
+        }
+        .top-bar a {
+            color: var(--ms-azul-claro);
+            text-decoration: none;
+            margin-left: 16px;
+        }
+
+        .navbar-mentesana {
+            background-color: var(--ms-blanco);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            height: 64px;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--ms-morado);
+            font-size: 20px;
+        }
+        .nav-link {
+            color: var(--ms-texto);
+            font-weight: 500;
+            font-size: 14px;
+            margin: 0 8px;
+        }
+        .nav-link.active {
+            color: var(--ms-azul);
+            border-bottom: 3px solid var(--ms-azul);
+        }
+        .btn-reservar {
+            background-color: var(--ms-morado);
+            color: var(--ms-blanco);
+            border-radius: 8px;
+            font-weight: 500;
+            padding: 8px 24px;
+        }
+        .btn-reservar:hover {
+            background-color: #8a6ed4;
+            color: var(--ms-blanco);
+        }
+
+        /* Tarjetas de formulario */
+        .card-formulario {
+            background-color: var(--ms-blanco);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 32px;
+            margin-bottom: 32px;
+        }
+        .card-formulario h2 {
+            font-size: 22px;
+            font-weight: 500;
+            color: var(--ms-texto);
+            margin-bottom: 24px;
+        }
+        .card-formulario label {
+            font-weight: 500;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .form-control {
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 14px;
+            border: 1px solid #ced4da;
+        }
+        .form-control:focus {
+            border-color: var(--ms-azul);
+            box-shadow: 0 0 0 0.25rem rgba(91, 141, 239, 0.25);
+        }
+        .btn-primary-mentesana {
+            background-color: var(--ms-azul);
+            border-color: var(--ms-azul);
+            color: var(--ms-blanco);
+            font-weight: 500;
+            padding: 12px 24px;
+            border-radius: 8px;
+            width: 100%;
+        }
+        .btn-primary-mentesana:hover {
+            background-color: #4a7bd4;
+        }
+
+        /* Escala emocional (RF-005) */
+        .escala-emocional {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        .escala-emocional input[type="radio"] {
+            display: none;
+        }
+        .escala-emocional label {
+            flex: 1;
+            text-align: center;
+            padding: 16px 8px;
+            background-color: var(--ms-lavanda);
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+        .escala-emocional label:hover {
+            background-color: var(--ms-azul-claro);
+        }
+        .escala-emocional input[type="radio"]:checked + label {
+            background-color: var(--ms-azul);
+            color: var(--ms-blanco);
+            border-color: var(--ms-azul);
+        }
+
+        /* Footer */
+        .footer-mentesana {
+            background-color: var(--ms-texto);
+            color: var(--ms-blanco);
+            padding: 48px 0 24px;
+            margin-top: 48px;
+        }
+        .footer-mentesana h5 {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+        .footer-mentesana p, .footer-mentesana a {
+            font-size: 14px;
+            color: #b0b8c8;
+            text-decoration: none;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .footer-mentesana a:hover {
+            color: var(--ms-azul-claro);
+        }
+        .footer-bottom {
+            border-top: 1px solid #4a5066;
+            padding-top: 24px;
+            margin-top: 32px;
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================= TOP BAR  ================= -->
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <i class="bi bi-mortarboard-fill"></i> Área de Psicología UPP
+                <span class="mx-3">|</span>
+                <i class="bi bi-envelope-fill"></i> psicologia@upp.edu.mx
+            </div>
+            <div>
+                <i class="bi bi-telephone-fill"></i> Línea de Atención
+                <i class="bi bi-whatsapp ms-2"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg navbar-mentesana">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logo-mentesana.jpeg" alt="Logotipo MenteSana" style="max-height: 40px;" class="me-2">
+                MenteSana
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item ms-3">
+                        <a class="btn btn-reservar" href="formularios.html">Reservar Cita</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
+    <main class="container my-5">
+
+        <div class="text-center mb-5">
+            <h1 style="font-size: 28px; font-weight: 400;">Formularios MenteSana</h1>
+            <p class="text-muted">Completa tus datos para acceder al sistema y registrar tu estado emocional.</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+
+                <!-- ================= RF-001: AUTENTICACIÓN INSTITUCIONAL ================= -->
+                <div class="card-formulario">
+                    <h2><i class="bi bi-person-circle me-2"></i> Autenticación Institucional </h2>
+                    <p class="text-muted cuerpo-pequeno mb-4">Ingresa con tu correo institucional para acceder al portal web.</p>
+
+                    <form action="" method="post">
+                        <!-- Campo de correo institucional -->
+                        <div class="mb-4">
+                            <label for="correoInstitucional">Correo Institucional:</label>
+                            <input 
+                                type="email" 
+                                class="form-control" 
+                                id="correoInstitucional" 
+                                name="correoInstitucional" 
+                                placeholder="ejemplo@upp.edu.mx" 
+                                pattern=".+@upp\.edu\.mx" 
+                                title="Debe ser un correo institucional terminado en @upp.edu.mx"
+                                required>
+                            <small class="text-muted cuerpo-pequeno">Formato requerido: usuario@upp.edu.mx</small>
+                        </div>
+
+                        <!-- Campo de contraseña -->
+                        <div class="mb-4">
+                            <label for="password">Contraseña:</label>
+                            <input 
+                                type="password" 
+                                class="form-control" 
+                                id="password" 
+                                name="password" 
+                                minlength="8" 
+                                placeholder="Mínimo 8 caracteres" 
+                                required>
+                        </div>
+
+                        <!-- Botón de envío -->
+                        <button type="submit" class="btn btn-primary-mentesana">
+                            <i class="bi bi-box-arrow-in-right me-2"></i> Iniciar Sesión
+                        </button>
+                    </form>
+                </div>
+
+                <!-- ================= RF-005: REGISTRO EMOCIONAL DIARIO ================= -->
+                <div class="card-formulario">
+                    <h2><i class="bi bi-emoji-smile me-2"></i> Registro Emocional Diario </h2>
+                    <p class="text-muted cuerpo-pequeno mb-4">Selecciona cómo te sientes hoy en una escala del 1 al 5.</p>
+
+                    <form action="" method="post">
+                        <!-- Escala emocional del 1 al 5 -->
+                        <div class="mb-4">
+                            <label class="d-block mb-2">¿Cómo te sientes hoy?</label>
+                            <div class="escala-emocional">
+                                <input type="radio" id="estado1" name="estadoEmocional" value="1" required>
+                                <label for="estado1">😢 1</label>
+
+                                <input type="radio" id="estado2" name="estadoEmocional" value="2">
+                                <label for="estado2">😐 2</label>
+
+                                <input type="radio" id="estado3" name="estadoEmocional" value="3">
+                                <label for="estado3">🙂 3</label>
+
+                                <input type="radio" id="estado4" name="estadoEmocional" value="4">
+                                <label for="estado4">😊 4</label>
+
+                                <input type="radio" id="estado5" name="estadoEmocional" value="5">
+                                <label for="estado5">😄 5</label>
+                            </div>
+                        </div>
+
+                        <!-- Campo de fecha -->
+                        <div class="mb-4">
+                            <label for="fechaRegistro">Fecha del registro:</label>
+                            <input 
+                                type="date" 
+                                class="form-control" 
+                                id="fechaRegistro" 
+                                name="fechaRegistro" 
+                                required>
+                        </div>
+
+                        <!-- Botón de envío -->
+                        <button type="submit" class="btn btn-primary-mentesana">
+                            <i class="bi bi-save me-2"></i> Guardar Registro
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer-mentesana">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>MenteSana</h5>
+                    <p>Tu bienestar emocional, a un solo clic.</p>
+                    <p>Plataforma digital para el cuidado y seguimiento de la salud mental universitaria.</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Navegación</h5>
+                    <a href="index.html">Inicio</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="servicios.html">Servicios</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Atención Estudiantil</h5>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> Edificio de Docencia 2</p>
+                    <p><i class="bi bi-clock-fill me-2"></i> Lunes a viernes de 8:00 am a 6:00 pm</p>
+                    <p><i class="bi bi-envelope-fill me-2"></i> psicologia@upp.edu.mx</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Institución</h5>
+                    <p>Universidad Politécnica de Pachuca</p>
+                    <span class="badge bg-secondary">Versión 1.0</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 MenteSana - Universidad Politécnica de Pachuca. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tVYxM" crossorigin="anonymous"></script>
+</body>
+</html>
