@@ -20,6 +20,44 @@ Bienvenido al repositorio oficial de Mente Sana. Esta es una aplicación web res
 
 ---
 
+## Evidencias de las Interfaces
+
+### En celular (pantalla menor a 992px)
+
+Desaparecen los enlaces y aparece el botón con tres rayitas (el ícono de hamburguesa) ☰
+Al tocarlo → se abre un cajón que se desliza desde la derecha
+[Ajustes Responsivos y Comportamiento de Menú Móvil]
+c:\Users\PC\Downloads\WhatsApp Image 2026-10-06 at 8.10.02 PM.jpeg
+
+### Tecnología usada
+
+Solo atributos de Bootstrap 5 → data-bs-toggle="offcanvas", data-bs-target → NO escribimos ni una línea de JavaScript
+Se adapta solo según el tamaño de la pantalla
+No hay desbordamiento horizontal → nada se sale de la pantalla en el celular
+"C:\Users\PC\Downloads\WhatsApp Image 2026-10-06 at 8.11.03 PM.jpeg"
+
+### En computadora (pantalla grande)
+
+Se ve normal → los enlaces: Inicio | Nosotros | Servicios | Contacto
+A la derecha el botón Reservar Cita
+Todo visible, sin menú escondido
+"C:\Users\PC\Downloads\WhatsApp Image 2026-10-06 at 8.11.56 PM.jpeg"
+
+### Vista en Pc de la pagina de nosotros.html
+
+"C:\Users\PC\Downloads\WhatsApp Image 2026-10-06 at 9.36.19 PM.jpeg"
+
+### Vista Formularios (WEB)
+
+"C:\Users\PC\Downloads\WhatsApp Image 2026-10-06 at 11.08.15 PM.jpeg"
+"C:\Users\PC\Downloads\WhatsApp Image 2026-10-06 at 11.08.15 PM.jpeg"
+"C:\Users\PC\Downloads\WhatsApp Image 2026-10-06 at 11.08.15 PM.jpeg"
+
+### Vista Formularios (Movil)
+
+"C:\Users\PC\Downloads\WhatsApp Image 2026-10-06 at 11.10.54 PM.jpeg"
+"C:\Users\PC\Downloads\WhatsApp Image 2026-10-06 at 11.10.54 PM (1).jpeg"
+
 ## 🎯 Objetivo
 
 ---Los estudiantes de la universidad politecmica de pachuca puedan agendar citas en el area de psicologia con la comodidad de acerlo desde su celular sin recurir a un proceso largo ya tardado
