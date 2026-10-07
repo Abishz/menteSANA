@@ -1,0 +1,94 @@
+/* ==========================================================================
+   MenteSana - Estilos específicos del Panel Administrativo 
+   ========================================================================== */
+
+/* Tarjetas de Métricas (RF-007) */
+.card-metrica {
+    background-color: var(--blanco);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.card-metrica:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(155, 127, 234, 0.15);
+}
+
+.icono-metrica {
+    width: 56px;
+    height: 56px;
+    background-color: var(--lavanda);
+    color: var(--morado-principal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* Tabla de Gestión (RF-010) */
+.card-tabla {
+    background-color: var(--blanco);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.table thead th {
+    font-weight: 500;
+    color: var(--texto-principal);
+    border-bottom: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table tbody td {
+    color: var(--texto-principal);
+    font-size: 0.95rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.table tbody tr:hover {
+    background-color: var(--bg-general);
+}
+
+/* Badges de Estado (RF-010) */
+.badge {
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.badge-atendida {
+    background-color: #D1FAE5; /* Verde pastel */
+    color: #065F46;
+}
+
+.badge-pendiente {
+    background-color: #FEF3C7; /* Amarillo pastel */
+    color: #92400E;
+}
+
+.badge-cancelada {
+    background-color: #FEE2E2; /* Rojo pastel */
+    color: #991B1B;
+}
+
+.badge-no-asistida {
+    background-color: #E5E7EB; /* Gris pastel */
+    color: #374151;
+}
+
+/* Botón outline primary personalizado */
+.btn-outline-primary {
+    color: var(--azul-principal);
+    border-color: var(--azul-principal);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--azul-principal);
+    color: var(--blanco);
+}
